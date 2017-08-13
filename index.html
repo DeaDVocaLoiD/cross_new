@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Novinka!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/on.png">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+
+    <style>
+        body {
+            background: #fff url(images/bravo.png) no-repeat;
+            width: 800px;
+            height: 600px;
+            position: relative;
+        }
+        
+        .general {
+            height: 395px;
+            width: 686px;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            right: 0;
+            left: 0;
+            position: absolute;
+            background: #081324;
+            border: 3px solid white;
+            border-radius: 15px;
+            box-shadow: 0 0 5px 2px;
+        }
+        
+        .general__top {
+            padding: 20px;
+        }
+        
+        .general__leftdiv {
+            position: absolute;
+            width: 370px;
+            height: 290px;
+        }
+        
+        .general__rightdiv {
+            width: 266px;
+            height: 289px;
+            position: absolute;
+            right: 0;
+        }
+        
+        .general__leftdiv-icon {
+            right: 0px;
+            top: 55px;
+            left: 40px;
+            position: absolute;
+        }
+        
+        .circle {
+            width: 369px;
+            height: 20px;
+            position: absolute;
+            bottom: 0;
+        }
+        
+        .circle__black {
+            margin: auto;
+            border: 2px solid white;
+            width: 15px;
+            height: 15px;
+            background: rgb(25, 34, 61);
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+        }
+        
+        .circle__white {
+            position: absolute;
+            left: 200px;
+            width: 15px;
+            height: 15px;
+            background: rgb(255, 255, 255);
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+        }
+        
+        .circle__red {
+            position: absolute;
+            left: 23px;
+            width: 15px;
+            height: 15px;
+            background: rgb(238, 48, 48);
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+        }
+        
+        .circle__blu {
+            position: absolute;
+            left: 23px;
+            width: 15px;
+            height: 15px;
+            background: rgb(41, 227, 234);
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+        }
+        
+        .word {
+            color: white;
+            font-family: sans-serif;
+            font-size: 120%;
+        }
+        
+        .word__next {
+            color: white;
+            font-family: sans-serif;
+            font-size: 85%;
+        }
+        
+        .fa {
+            color: yellow;
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fa-angle-down:before {
+            content: "\f107";
+            margin-left: 6px;
+            color: rgb(67, 73, 83);
+        }
+        
+        .star-rating {
+            font-size: 0;
+            margin-bottom: 20px;
+        }
+        
+        .star-rating__wrap {
+            display: inline-block;
+            font-size: 1rem;
+        }
+        
+        .star-rating__wrap:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .star-rating__ico {
+            float: right;
+            padding-left: 2px;
+            cursor: pointer;
+            color: #FFB300;
+        }
+        
+        .star-rating__ico:last-child {
+            padding-left: 0;
+        }
+        
+        .star-rating__input {
+            display: none;
+        }
+        
+        .star-rating__ico:hover:before,
+        .star-rating__ico:hover ~ .star-rating__ico:before,
+        .star-rating__input:checked ~ .star-rating__ico:before {
+            content: "\f005";
+        }
+        
+        .form {
+            width: 70px;
+            height: 30px;
+            border: 1px solid rgb(72, 80, 93);
+            right: 188px;
+            float: left;
+            margin-right: 2px;
+        }
+        
+        .form__two {
+            width: 70px;
+            height: 30px;
+            border: 1px solid rgb(72, 80, 93);
+            right: 188px;
+            float: left;
+        }
+        
+        .form__text {
+            font-family: sans-serif;
+            color: rgb(72, 80, 93);
+            position: absolute;
+            left: 15px;
+            /* text-align: -webkit-center; */
+            /* top: 0px; */
+            bottom: 116px;
+        }
+        
+        .form__text2 {
+            font-family: sans-serif;
+            color: rgb(72, 80, 93);
+            position: absolute;
+            left: 95px;
+            /* text-align: -webkit-center; */
+            /* top: 0px; */
+            bottom: 116px;
+        }
+        
+        .form__thre {
+            margin-top: 25px;
+            width: 190px;
+            height: 40px;
+            border: 1px solid rgb(72, 80, 93);
+            right: 188px;
+            float: left;
+            opacity: 0.8;
+            background-color: rgb(25, 35, 50);
+        }
+        
+        .form__text3 {
+            font-family: sans-serif;
+            color: rgb(72, 80, 93);
+            position: absolute;
+            left: 53px;
+            /* text-align: -webkit-center; */
+            /* top: 0px; */
+            bottom: 54px;
+            clear: both;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="general">
+        <div class="general__top">
+            <img class="general__logo" src="images/logo (1).png">
+        </div>
+
+        <div class="general__leftdiv">
+            <img class="general__leftdiv-icon" src="images/Nike-SB-Stefan-Janoski-Max.png">
+
+            <div class="circle">
+                <div class="circle__black">
+
+                    <div class="circle__white">
+                        <div class="circle__red">
+                            <div class="circle__blu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="general__rightdiv">
+            <p class="word">
+                Nike SB Stefan
+                <br> Janoski Max
+            </p>
+            <p class="word__next">
+                Unisex Skateboarding Shoe (Men's)
+            </p>
+
+            <div class="star-rating">
+                <div class="star-rating__wrap">
+                    <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-5" title="5 out of 5 stars"></label>
+                    <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-4" title="4 out of 5 stars"></label>
+                    <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-3" title="3 out of 5 stars"></label>
+                    <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-2" title="2 out of 5 stars"></label>
+                    <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                    <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="1 out of 5 stars"></label>
+                </div>
+            </div>
+
+
+
+
+            <form class="form">
+                <span class="form__text">Size<i class="fa fa-angle-down" aria-hidden="true"></i></span>
+            </form>
+            <form class="form__two">
+                <span class="form__text2">Qity<i class="fa fa-angle-down" aria-hidden="true"></i></span>
+            </form>
+            <form class="form__thre">
+                <span class="form__text3">Add to card</span>
+            </form>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
