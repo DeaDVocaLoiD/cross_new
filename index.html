@@ -42,28 +42,23 @@
         }
         
         .general__rightdiv {
+            float: right;
             width: 266px;
-            height: 289px;
-            position: absolute;
-            right: 0;
         }
         
         .general__leftdiv-icon {
-            right: 0px;
-            top: 55px;
-            left: 40px;
-            position: absolute;
+            float: right;
+            padding-bottom: 50px;
+            padding-top: 50px;
         }
         
         .circle {
-            width: 369px;
-            height: 20px;
-            position: absolute;
-            bottom: 0;
+            margin-left: 140px;
+            float: left;
         }
         
         .circle__black {
-            margin: auto;
+            float: left;
             border: 2px solid white;
             width: 15px;
             height: 15px;
@@ -71,39 +66,43 @@
             -moz-border-radius: 50px;
             -webkit-border-radius: 50px;
             border-radius: 50px;
+            list-style-type: none;
+            margin-right: 5px;
         }
         
         .circle__white {
-            position: absolute;
-            left: 200px;
             width: 15px;
             height: 15px;
             background: rgb(255, 255, 255);
             -moz-border-radius: 50px;
             -webkit-border-radius: 50px;
             border-radius: 50px;
+            list-style-type: none;
+            float: left;
+            margin-right: 5px;
         }
         
         .circle__red {
-            position: absolute;
-            left: 23px;
+            float: left;
             width: 15px;
             height: 15px;
             background: rgb(238, 48, 48);
             -moz-border-radius: 50px;
             -webkit-border-radius: 50px;
             border-radius: 50px;
+            list-style-type: none;
+            margin-right: 5px;
         }
         
         .circle__blu {
-            position: absolute;
-            left: 23px;
             width: 15px;
             height: 15px;
             background: rgb(41, 227, 234);
             -moz-border-radius: 50px;
             -webkit-border-radius: 50px;
             border-radius: 50px;
+            list-style-type: none;
+            float: left;
         }
         
         .word {
@@ -170,45 +169,43 @@
             content: "\f005";
         }
         
-        .form {
-            width: 70px;
-            height: 30px;
-            border: 1px solid rgb(72, 80, 93);
-            right: 188px;
-            float: left;
-            margin-right: 2px;
-        }
-        
-        .form__two {
-            width: 70px;
-            height: 30px;
-            border: 1px solid rgb(72, 80, 93);
-            right: 188px;
-            float: left;
-        }
-        
         .form__text {
+            line-height: 30px;
+            /* margin-bottom: 16px; */
             font-family: sans-serif;
             color: rgb(72, 80, 93);
-            position: absolute;
-            left: 15px;
-            /* text-align: -webkit-center; */
-            /* top: 0px; */
+            /* left: 15px; */
             bottom: 116px;
+            width: 70px;
+            height: 30px;
+            border: 1px solid rgb(72, 80, 93);
+            /* right: 188px; */
+            float: left;
+            margin-right: 2px;
+            text-align: -webkit-center;
         }
         
         .form__text2 {
+            text-align: -webkit-center;
             font-family: sans-serif;
             color: rgb(72, 80, 93);
-            position: absolute;
-            left: 95px;
-            /* text-align: -webkit-center; */
-            /* top: 0px; */
             bottom: 116px;
+            width: 70px;
+            height: 30px;
+            border: 1px solid rgb(72, 80, 93);
+            right: 188px;
+            float: left;
+            line-height: 30px;
         }
         
-        .form__thre {
-            margin-top: 25px;
+        .form__text3 {
+            line-height: 39px;
+            text-align: center;
+            font-family: sans-serif;
+            color: rgb(72, 80, 93);
+            /* left: 53px; */
+            clear: both;
+            /* margin-top: 25px; */
             width: 190px;
             height: 40px;
             border: 1px solid rgb(72, 80, 93);
@@ -216,17 +213,6 @@
             float: left;
             opacity: 0.8;
             background-color: rgb(25, 35, 50);
-        }
-        
-        .form__text3 {
-            font-family: sans-serif;
-            color: rgb(72, 80, 93);
-            position: absolute;
-            left: 53px;
-            /* text-align: -webkit-center; */
-            /* top: 0px; */
-            bottom: 54px;
-            clear: both;
         }
 
     </style>
@@ -244,17 +230,13 @@
         <div class="general__leftdiv">
             <img class="general__leftdiv-icon" src="images/Nike-SB-Stefan-Janoski-Max.png">
 
-            <div class="circle">
-                <div class="circle__black">
 
-                    <div class="circle__white">
-                        <div class="circle__red">
-                            <div class="circle__blu">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ul class="circle">
+                <li class="circle__black"></li>
+                <li class="circle__white"></li>
+                <li class="circle__red"></li>
+                <li class="circle__blu"></li>
+            </ul>
         </div>
         <div class="general__rightdiv">
             <p class="word">
@@ -283,14 +265,10 @@
 
 
 
-            <form class="form">
-                <span class="form__text">Size<i class="fa fa-angle-down" aria-hidden="true"></i></span>
-            </form>
-            <form class="form__two">
-                <span class="form__text2">Qity<i class="fa fa-angle-down" aria-hidden="true"></i></span>
-            </form>
-            <form class="form__thre">
-                <span class="form__text3">Add to card</span>
+            <form>
+                <p class="form__text">Size<i class="fa fa-angle-down" aria-hidden="true"></i></p>
+                <p class="form__text2">Qity<i class="fa fa-angle-down" aria-hidden="true"></i></p>
+                <p class="form__text3">Add to card</p>
             </form>
 
         </div>
@@ -305,4 +283,5 @@
 
 
     </div>
+
 </body>
